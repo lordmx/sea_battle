@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Морской бой: тестовой задание</title>
+
+	<meta name="author" content="Ilya Kolesnikov <fatumm@gmail.com>">
+	<meta name="description" content="Морской бой: тестовой задание">
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="/resources/css/main.css">
+</meta>
+</head>
+<body>
+<h1>ID #<span>{{ id }}</span></h1>
+
+<div id="board"></div>
+
+<div id="button-holder">
+	<button>Обновить</button>
+</div>
+
+<script 
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous">
+</script>
+<script src="/resources/js/main.js" type="text/javascript"></script>
+
+<script type = "text/javascript">
+	var id = '{{ id }}';
+
+	$(document).ready(function() {
+		var board = new Board();
+		board.fetch(id);
+
+		$('#button-holder button').on('click', function() {
+			board.fetch(null);
+		});
+	});
+
+</script>
+
+</body>
+</html>

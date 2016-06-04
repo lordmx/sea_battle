@@ -1,0 +1,5 @@
+pgsql:
+  host: localhost
+  user: root
+  password: root
+  schema: sea_battle

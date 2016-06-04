@@ -1,0 +1,36 @@
+#board {
+	display: table;
+}
+	#board div.cell {
+		width: 20px;
+		height: 20px;
+		margin: 3px;
+		border: 1px solid;
+		background-color: white;
+		float: left;
+		display: table-cell;
+	}
+		#board div.ship {
+			background-color: red;
+			text-align: center;
+			vertical-align: middle;;
+		}
+			#board div.ship span {
+				color: white;
+			}
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
